@@ -1,4 +1,4 @@
-FROM python:3.9-alpine
+FROM python:3.9-slim
 
 MAINTAINER Chunhong Web
 
@@ -11,7 +11,3 @@ RUN pip install -r ./requirements.txt
 WORKDIR /app
 
 COPY ./app .
-
-RUN adduser -D user
-
-USER user
